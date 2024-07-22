@@ -1,0 +1,24 @@
+.h-navigation{
+    background-color: #448aad;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    position: relative;
+}
+.label-web{
+    margin-right: 30px;
+    color: rgb(255, 205, 139);
+
+}
+
+.link-to:link, .link-to:visited{
+    color: antiquewhite;
+    margin-right: 30px;
+
+}
+
+.link-to:active,.link-to:hover{
+    color: rgb(168, 168, 168);
+}

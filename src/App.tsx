@@ -6,11 +6,18 @@ import { IProduct } from "./models";
 import { Loader } from "./components/Loader";
 import { ErrorMessage } from "./components/ErrorMessage";
 import { Modal } from "./components/Modal";
+import { CreateProduct } from "./components/CreateProduct";
+import { Navigation } from "./components/Navigation";
 
 function App() {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
+  const [modal, setModal] = useState(false);
+
+  function addProduct(product: IProduct) {
+    setProducts(prev => [...prev, product])
+  }
 
   async function getProducts() {
     try {
@@ -31,16 +38,25 @@ function App() {
 
   }, [])
 
+  const createHandler = (product: IProduct) => {
+    setModal(false);
+    addProduct(product)
+  }
   return (
     <div className="conteiner">
-      <Modal/>
-      
+      {modal && <Modal title="Create new product" onClose={() => setModal(false)}>
+        <CreateProduct onCreate={createHandler} />
+      </Modal>}
+
+      <button className="btn-add" onClick={()=>setModal(true)}>+</button>
+
       {products.map(product =>
         <Product product={product} key={product.id} />
       )}
+
       {loading && <Loader />}
-      {error && <ErrorMessage error={error}/>}
-      
+      {error && <ErrorMessage error={error} />}
+
     </div>
   );
 }

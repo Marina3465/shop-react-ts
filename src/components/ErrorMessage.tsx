@@ -5,6 +5,6 @@ interface ErrorMessageProps{
 
 export function ErrorMessage({error}: ErrorMessageProps){
     return(
-        <p className="error">{error}</p>
+        <p className="error" style={{}}>{error}</p>
     )
-}
+} 

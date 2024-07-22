@@ -2,8 +2,24 @@
     display: grid;
     justify-content: center;
 }
-.error{
+
+.error {
     color: red;
-    font-weight: 900;
-    font-size: 25px;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.btn-add {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: rgb(192, 192, 192);
+    padding: 10px 15px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+.btn-add:hover {
+    background-color: rgb(108, 108, 108);
 }
