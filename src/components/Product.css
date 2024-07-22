@@ -1,0 +1,29 @@
+.conteiner-product {
+    width: 700px;
+    padding: 20px;
+    border: 1px solid grey;
+    margin-bottom: 20px;
+
+}
+
+.conteiner-product img {
+    height: 300px;
+}
+
+.conteiner-product h2 {
+    font-size: 18px;
+}
+
+.btn-show{
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-size: 14x;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-show:hover{
+    color: gray;
+    cursor: pointer;
+}

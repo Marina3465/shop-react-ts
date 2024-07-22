@@ -1,0 +1,25 @@
+.bg-modal {
+    position: fixed;
+    background-color: #00000080;
+    background-position: 0 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.conteiner-modal {
+    width: 500px;
+    height: fit-content;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 15px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
